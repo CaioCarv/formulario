@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pórtifolio</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="box">
+        <form action="{% url 'salvar' %}" method="post" class="form">
+            {% csrf_token %}
+            {{ form }}
+            <h1>Hello World!</h1>
+            <h2>Como você deseja ser chamado?</h2>
+            <div class="inputBox">
+                <input type="text" name="name"> 
+                <label> Nome / Apelido </label>
+                <span></span>
+            </div>
+            <div class="links">
+                <a href="#">Não desejo me identificar!</a>
+            </div>
+            <input type="submit" value="Enviar!">
+
+        </form>
+
+    </div>
+    </body>
+</html>
+
+<!--
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Pórtifolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="box">
+        <form action="{% url 'index' %}" method="POST">
+            <h1>Hello World!</h1>
+        <h2>Como você deseja ser chamado?</h2>
+        <div class="inputBox">
+            <input type="text" name="nome"> 
+            <label> Nome / Apelido </label>
+            <span></span>
+        </div>
+        <div class="links">
+            <a href="#">Não desejo me identificar!</a>
+        </div>
+        <input type="submit" value="Enviar!">
+        </form>
+
+    </div>
+    </body>
+</html>
+-->
