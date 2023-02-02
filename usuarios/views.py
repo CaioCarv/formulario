@@ -11,5 +11,5 @@ def save_user(request):
         form_data = Usuario(name=name)
         form_data.save()
 
-        return redirect('Salvar')
+        return redirect('base')
     return render(request, 'base.html')
